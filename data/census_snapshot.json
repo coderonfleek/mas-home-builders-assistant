@@ -1,0 +1,165 @@
+{
+  "_meta": {
+    "source": "US Census ACS 5-Year Estimates (approximate snapshot for offline use)",
+    "note": "Refresh from the Census API when convenient. Data does not need to be current-to-the-dollar; it's used as illustrative context, not for real financial decisions.",
+    "fields": {
+      "population": "Total population (B01003_001E)",
+      "median_age": "Median age (B01002_001E)",
+      "median_household_income": "Median household income, USD (B19013_001E)",
+      "median_home_value": "Median home value, USD (B25077_001E)",
+      "median_gross_rent": "Median gross rent, USD/month (B25064_001E)",
+      "owner_occupied_units": "Owner-occupied housing units (B25003_002E)",
+      "total_occupied_units": "Total occupied housing units (B25003_001E)"
+    }
+  },
+  "78704": {
+    "population": 46274, "median_age": 34,
+    "median_household_income": 87421, "median_home_value": 648900,
+    "median_gross_rent": 1876,
+    "owner_occupied_units": 8412, "total_occupied_units": 22910
+  },
+  "78745": {
+    "population": 66821, "median_age": 33,
+    "median_household_income": 74390, "median_home_value": 421700,
+    "median_gross_rent": 1602,
+    "owner_occupied_units": 13847, "total_occupied_units": 27352
+  },
+  "78741": {
+    "population": 51204, "median_age": 30,
+    "median_household_income": 51840, "median_home_value": 312500,
+    "median_gross_rent": 1418,
+    "owner_occupied_units": 5928, "total_occupied_units": 19012
+  },
+  "78702": {
+    "population": 27431, "median_age": 33,
+    "median_household_income": 68512, "median_home_value": 552800,
+    "median_gross_rent": 1710,
+    "owner_occupied_units": 6104, "total_occupied_units": 12518
+  },
+  "78758": {
+    "population": 51612, "median_age": 32,
+    "median_household_income": 59204, "median_home_value": 358900,
+    "median_gross_rent": 1524,
+    "owner_occupied_units": 9412, "total_occupied_units": 21836
+  },
+  "80203": {
+    "population": 12148, "median_age": 34,
+    "median_household_income": 78214, "median_home_value": 512400,
+    "median_gross_rent": 1687,
+    "owner_occupied_units": 2814, "total_occupied_units": 6902
+  },
+  "80205": {
+    "population": 34012, "median_age": 33,
+    "median_household_income": 71508, "median_home_value": 498700,
+    "median_gross_rent": 1612,
+    "owner_occupied_units": 7218, "total_occupied_units": 14830
+  },
+  "80210": {
+    "population": 29184, "median_age": 35,
+    "median_household_income": 96812, "median_home_value": 682400,
+    "median_gross_rent": 1758,
+    "owner_occupied_units": 8104, "total_occupied_units": 13492
+  },
+  "80219": {
+    "population": 63428, "median_age": 30,
+    "median_household_income": 54120, "median_home_value": 342800,
+    "median_gross_rent": 1418,
+    "owner_occupied_units": 11208, "total_occupied_units": 21532
+  },
+  "80247": {
+    "population": 24816, "median_age": 34,
+    "median_household_income": 62410, "median_home_value": 384500,
+    "median_gross_rent": 1502,
+    "owner_occupied_units": 6820, "total_occupied_units": 12184
+  },
+  "37206": {
+    "population": 32148, "median_age": 33,
+    "median_household_income": 72840, "median_home_value": 512300,
+    "median_gross_rent": 1478,
+    "owner_occupied_units": 6812, "total_occupied_units": 14328
+  },
+  "37208": {
+    "population": 15412, "median_age": 32,
+    "median_household_income": 58210, "median_home_value": 428600,
+    "median_gross_rent": 1382,
+    "owner_occupied_units": 3128, "total_occupied_units": 6842
+  },
+  "37211": {
+    "population": 76318, "median_age": 33,
+    "median_household_income": 61240, "median_home_value": 358400,
+    "median_gross_rent": 1418,
+    "owner_occupied_units": 14812, "total_occupied_units": 29847
+  },
+  "37216": {
+    "population": 21048, "median_age": 34,
+    "median_household_income": 68912, "median_home_value": 421800,
+    "median_gross_rent": 1442,
+    "owner_occupied_units": 5628, "total_occupied_units": 9814
+  },
+  "37013": {
+    "population": 77128, "median_age": 32,
+    "median_household_income": 63421, "median_home_value": 298700,
+    "median_gross_rent": 1348,
+    "owner_occupied_units": 16204, "total_occupied_units": 28912
+  },
+  "27601": {
+    "population": 8412, "median_age": 33,
+    "median_household_income": 62310, "median_home_value": 428900,
+    "median_gross_rent": 1382,
+    "owner_occupied_units": 2148, "total_occupied_units": 4218
+  },
+  "27607": {
+    "population": 30124, "median_age": 26,
+    "median_household_income": 71812, "median_home_value": 508400,
+    "median_gross_rent": 1462,
+    "owner_occupied_units": 6208, "total_occupied_units": 13214
+  },
+  "27610": {
+    "population": 62841, "median_age": 32,
+    "median_household_income": 48412, "median_home_value": 258900,
+    "median_gross_rent": 1218,
+    "owner_occupied_units": 12184, "total_occupied_units": 24102
+  },
+  "27612": {
+    "population": 33218, "median_age": 38,
+    "median_household_income": 82410, "median_home_value": 468200,
+    "median_gross_rent": 1548,
+    "owner_occupied_units": 8942, "total_occupied_units": 14618
+  },
+  "27603": {
+    "population": 63421, "median_age": 34,
+    "median_household_income": 58910, "median_home_value": 318400,
+    "median_gross_rent": 1342,
+    "owner_occupied_units": 15218, "total_occupied_units": 26418
+  },
+  "85004": {
+    "population": 12812, "median_age": 34,
+    "median_household_income": 62410, "median_home_value": 402800,
+    "median_gross_rent": 1518,
+    "owner_occupied_units": 2418, "total_occupied_units": 6841
+  },
+  "85016": {
+    "population": 41208, "median_age": 35,
+    "median_household_income": 71204, "median_home_value": 478900,
+    "median_gross_rent": 1462,
+    "owner_occupied_units": 9218, "total_occupied_units": 18412
+  },
+  "85033": {
+    "population": 55184, "median_age": 30,
+    "median_household_income": 52418, "median_home_value": 288400,
+    "median_gross_rent": 1348,
+    "owner_occupied_units": 11842, "total_occupied_units": 18932
+  },
+  "85044": {
+    "population": 47210, "median_age": 40,
+    "median_household_income": 82410, "median_home_value": 428900,
+    "median_gross_rent": 1618,
+    "owner_occupied_units": 13418, "total_occupied_units": 18942
+  },
+  "85053": {
+    "population": 39142, "median_age": 32,
+    "median_household_income": 61240, "median_home_value": 348500,
+    "median_gross_rent": 1418,
+    "owner_occupied_units": 9812, "total_occupied_units": 15218
+  }
+}

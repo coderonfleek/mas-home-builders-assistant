@@ -1,0 +1,73 @@
+04-03: Listings
+
+python -c "
+from src.tools.listings import search_listings, fetch_listings_raw
+print(search_listings.invoke({'city': 'Austin', 'max_price': 400000, 'min_bedrooms': 3, 'limit': 3}))
+print('---')
+print(fetch_listings_raw(city='Austin', max_price=400000, min_bedrooms=3, limit=2))
+"
+
+----
+
+04-04:
+- Schools:
+python -c "
+from src.tools.schools import search_schools_near, fetch_schools_summary
+print(search_schools_near.invoke({'zip_code': '78704', 'level': 'elementary'}))
+print('---')
+print(fetch_schools_summary('78704'))
+"
+
+- Neighborhoods:
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.tools.neighborhood import get_demographics
+print(get_demographics.invoke({'zip_code': '78704'}))
+"
+-----
+
+04-05:
+
+- Listings Agent:
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.agents.specialists import listings_agent
+
+agent = listings_agent()
+result = agent.invoke({'messages': [{'role': 'user', 'content': 'Find me 3-bedroom homes under \$400k in Austin'}]})
+print(result['messages'][-1].content)
+"
+
+- Neighborhood Agent:
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.agents.specialists import schools_agent
+
+agent = schools_agent()
+result = agent.invoke({'messages': [{'role': 'user', 'content': 'What are the schools like in ZIP 78704?'}]})
+print(result['messages'][-1].content)
+"
+
+- Schools Agent
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.agents.specialists import schools_agent
+
+agent = schools_agent()
+result = agent.invoke({'messages': [{'role': 'user', 'content': 'What are the schools like in ZIP 78704?'}]})
+print(result['messages'][-1].content)
+"
+
+04-06:
+
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.tools.listings import fetch_listings_raw
+from src.synthesis.scoring import rank_listings
+raw = fetch_listings_raw(city='Austin', max_price=500000, min_bedrooms=3, limit=10)
+ranked = rank_listings(raw, max_price=500000)
+for r in ranked[:3]:
+    print(f\"score={r['_score']}  #{r['listing_id']}  \${r['price']:,}  ZIP {r['zip_code']}  components={r['_components']}\")
+"
+
+----
