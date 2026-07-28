@@ -71,3 +71,64 @@ for r in ranked[:3]:
 "
 
 ----
+
+04-07:
+
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.router.classifier import classify_query
+
+for q in [
+    '3BR under \$500k in Austin with good schools',
+    \"What's the median home price in 78704?\",
+    'Is 37206 a family-friendly ZIP?',
+]:
+    print(q)
+    for c in classify_query({'query': q})['classifications']:
+        print(f\"  → {c['source']}: {c['query']}\")
+    print()
+"
+
+-----
+
+04-08:
+
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.router.graph import build_workflow
+
+wf = build_workflow()
+result = wf.invoke({'query': '3BR homes under \$500k in Austin with good schools'})
+
+print('=== Classifications ===')
+for c in result['classifications']:
+    print(f\"  {c['source']}: {c['query']}\")
+
+print()
+print('=== Agent results ===')
+for r in result['results']:
+    print(f\"--- {r['source']} ---\")
+    print(r['result'][:200])
+    print()
+
+print('=== Final brief ===')
+print(result['final_answer'])
+"
+----
+
+04-10:
+
+python -c "
+from dotenv import load_dotenv; load_dotenv()
+from src.stateful import build_chat_agent
+
+agent = build_chat_agent()
+config = {'configurable': {'thread_id': 'test-1'}}
+r1 = agent.invoke({'messages': [{'role': 'user', 'content': '3BR in Austin under \$500k'}]}, config=config)
+print('--- Turn 1 ---')
+print(r1['messages'][-1].content[:400])
+r2 = agent.invoke({'messages': [{'role': 'user', 'content': 'now only the ones near good schools'}]}, config=config)
+print()
+print('--- Turn 2 (refinement) ---')
+print(r2['messages'][-1].content[:400])
+"
