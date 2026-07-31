@@ -1,4 +1,4 @@
-04-03: Listings
+05-03: Listings
 
 python -c "
 from src.tools.listings import search_listings, fetch_listings_raw
@@ -9,7 +9,7 @@ print(fetch_listings_raw(city='Austin', max_price=400000, min_bedrooms=3, limit=
 
 ----
 
-04-04:
+05-04:
 - Schools:
 python -c "
 from src.tools.schools import search_schools_near, fetch_schools_summary
@@ -26,7 +26,7 @@ print(get_demographics.invoke({'zip_code': '78704'}))
 "
 -----
 
-04-05:
+05-05:
 
 - Listings Agent:
 python -c "
@@ -41,10 +41,10 @@ print(result['messages'][-1].content)
 - Neighborhood Agent:
 python -c "
 from dotenv import load_dotenv; load_dotenv()
-from src.agents.specialists import schools_agent
+from src.agents.specialists import neighborhood_agent
 
-agent = schools_agent()
-result = agent.invoke({'messages': [{'role': 'user', 'content': 'What are the schools like in ZIP 78704?'}]})
+agent = neighborhood_agent()
+result = agent.invoke({'messages': [{'role': 'user', 'content': 'Tell me about ZIP 78704'}]})
 print(result['messages'][-1].content)
 "
 
@@ -58,7 +58,7 @@ result = agent.invoke({'messages': [{'role': 'user', 'content': 'What are the sc
 print(result['messages'][-1].content)
 "
 
-04-06:
+05-06:
 
 python -c "
 from dotenv import load_dotenv; load_dotenv()
@@ -72,7 +72,7 @@ for r in ranked[:3]:
 
 ----
 
-04-07:
+05-07:
 
 python -c "
 from dotenv import load_dotenv; load_dotenv()
@@ -91,7 +91,7 @@ for q in [
 
 -----
 
-04-08:
+05-08:
 
 python -c "
 from dotenv import load_dotenv; load_dotenv()
@@ -116,7 +116,7 @@ print(result['final_answer'])
 "
 ----
 
-04-10:
+05-10:
 
 python -c "
 from dotenv import load_dotenv; load_dotenv()
